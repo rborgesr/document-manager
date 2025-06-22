@@ -11,10 +11,16 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
-            .csrf(csrf -> csrf.disable()) // Forma atual para desabilitar CSRF
+            .csrf(csrf -> csrf.disable()) // desabilita CSRF
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/projects/**").permitAll() // libera acesso para /api/projects (GET, POST, etc)
-                .anyRequest().authenticated() // para o resto, exige autenticação
+                .requestMatchers(
+                    "/api/projects/**",
+                    "/api/documents/**",
+                    "/swagger-ui/**",
+                    "/v3/api-docs/**",
+                    "/swagger-ui.html"
+                ).permitAll() // libera acesso para essas rotas
+                .anyRequest().authenticated() // exige autenticação para o resto
             );
         return http.build();
     }
