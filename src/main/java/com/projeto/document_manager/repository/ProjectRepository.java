@@ -14,5 +14,5 @@ public interface ProjectRepository extends JpaRepository<Project, Long> {
     List<Project> findByDisciplinesContaining(String discipline);
 
     // Buscar projeto por nome 
-    Optional<Project> findByName(String name);
+    //Optional<Project> findByName(String name);
 }

@@ -35,9 +35,9 @@ public class ProjectService {
     public void delete(Long id) {
         projectRepository.deleteById(id);
     }
-
+/*
     // Novo método para buscar projetos por disciplina na lista
     public List<Project> findByDiscipline(String discipline) {
         return projectRepository.findByDisciplinesContaining(discipline);
-    }
+    }*/
 }

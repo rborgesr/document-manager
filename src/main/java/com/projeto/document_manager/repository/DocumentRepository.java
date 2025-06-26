@@ -13,6 +13,7 @@ public interface DocumentRepository extends JpaRepository<Document, Long> {
     // Buscar documentos pelo objeto Project (entidade)
     List<Document> findByProject(Project project);
 
+  /*
     // Buscar documentos por disciplina (campo String discipline em Document)
     List<Document> findByDiscipline(String discipline);
 
@@ -20,5 +21,5 @@ public interface DocumentRepository extends JpaRepository<Document, Long> {
 
     List<Document> findByStatus(Integer status);
 
-    List<Document> findByRevision(Integer revision);
+    List<Document> findByRevision(Integer revision);*/
 }

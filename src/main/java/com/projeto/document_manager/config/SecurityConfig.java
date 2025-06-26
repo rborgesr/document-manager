@@ -19,7 +19,7 @@ public class SecurityConfig {
                     "/swagger-ui/**",
                     "/v3/api-docs/**",
                     "/swagger-ui.html"
-                ).permitAll() // libera acesso para essas rotas
+                ).permitAll()
                 .anyRequest().authenticated() // exige autenticação para o resto
             );
         return http.build();

@@ -8,7 +8,7 @@ public class DocumentRequestDTO {
     private Integer type;
     private Integer status;
     private String discipline;
-    private Long projectId;  // ALTERADO: agora usa projectId
+    private Long projectId;  
 
     // Getters e Setters
 

@@ -19,7 +19,7 @@ public class ProjectResponseDTO {
 
     private List<String> disciplines;
 
-    public ProjectResponseDTO() {}
+    //public ProjectResponseDTO() {}
 
     public ProjectResponseDTO(Project project) {
         this.id = project.getId();
